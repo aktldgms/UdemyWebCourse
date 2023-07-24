@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&family=Roboto:wght@100;300;400;700;900&display=swap');
+
+:root {
+    --blue: #08B2E8;
+    --white: #fff;
+    --dark: #000;
+    --softDark: #333;
+    --gray: #999999;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 1.6rem;
+}
+
+span {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex-items {
+    display: flex;
+}
+
+.btn-primary {
+    padding: 1.2rem 2rem;
+    color: var(--white);
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: .5rem;
+    transition: all .15s ease;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-family: 'Roboto';
+    letter-spacing: 1.4px;
+    font-weight: 300;
+}
+
+.btn-primary:hover {
+    background-color: #0a7fa3;
+    cursor: pointer;
+}
+
+.btn-outline {
+    padding: 1.2rem 2rem;
+    color: var(--white);
+    background-color: var(--gray);
+    border: 1px solid var(--white);
+    border-radius: .5rem;
+    transition: all .15s ease;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-family: 'Roboto';
+    letter-spacing: 1.4px;
+    font-weight: 300;
+    border: 1px solid var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--gray);
+    cursor: pointer;
+}

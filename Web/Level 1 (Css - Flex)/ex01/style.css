@@ -1,0 +1,158 @@
+@import url(utils.css);
+@import url(m_query.css);
+
+header {
+    justify-content: space-between;
+    background-color: var(--softDark);
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6.4rem;
+    color: var(--white);
+    align-items: center;
+    border-bottom: 1px solid var(--dark);
+    z-index: 5;
+}
+
+nav a {
+    color: var(--white);
+    padding: 2rem;
+    display: inline-block;
+    transition: all .15s linear;
+}
+
+nav a:hover {
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.brand span {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-left: .5rem;
+}
+
+.brand a {
+    font-size: 2rem;
+    margin-left: .5rem;
+    color: var(--white);
+}
+
+.welcome {
+    width: 100%;
+    height: 100vh;
+    background-image: url(imgs/Porsche2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    flex-direction: column;
+}
+
+.welcome * {
+    z-index: 5;
+}
+
+.welcome h1 {
+    font-size: 5.5rem;
+    font-weight: 200;
+}
+.welcome p {
+    font-weight: 300;
+}
+
+.welcome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.about {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    padding: 2rem;
+    font-size: 1.6rem;
+    margin: 6rem 0rem;
+}
+
+.card i {
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 2.5rem 1.5rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+}
+
+.Show-Room {
+    text-align: center;
+    background-color: var(--gray);
+    height: 45vh;
+}
+
+.one img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.two {
+    margin: auto;
+    color: var(--white);
+}
+
+.two p {
+    font-weight: 300;
+}
+
+.two h2 {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+.two.superior {
+    order: -1;
+}
+
+.images {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin: 7.5rem 0rem;
+}
+
+.images img {
+    max-width: 400px;
+    padding: .5rem;
+}
+
+.images img:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    
+}
