@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            font-size: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 3.2rem;
+        }
+
+        h3 {
+            font-size: 2.4rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        footer {
+            display: flex;
+            background-color: #4cb9b9;
+            color: #fff;
+            min-height: 20rem;
+            justify-content:center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            background-color: #4cb9b9;
+            color: #fff;
+            min-height: 20rem;
+            justify-content:center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header h3 {
+            font-weight: 400;
+        }
+
+        nav {
+            display: flex;
+            justify-content: start;
+            background-color: #333;
+        }
+
+        nav li a{
+            display: inline-block;
+            padding: 2rem;
+            font-size: 1.6rem;
+        }
+
+        nav li:hover {
+            background-color: #444;
+        }
+
+        nav li:first-child {
+            display: none;
+        }
+
+        main {
+            display: flex;
+            color: #111;
+        }
+
+        .main {
+            order: -1;
+            width: 70%;
+            background-color: #fff;
+        }
+
+        main h2 {
+            padding: 2rem;
+        }
+
+        main .photo {
+            display: flex;
+            flex: 1 1 auto;
+            padding: 2rem;
+            padding-top: 0;
+        }
+
+        main .photo img{
+            max-width: 100%;
+            height: 20rem;
+            object-fit: cover;
+        }
+
+        main p {
+            padding-top: 0;
+            padding: 2rem;
+        }
+
+        .side {
+            width: 30%;
+            background-color: #f1f1f1;
+        }
+
+        @media only screen and (max-width: 600px) {
+            main {
+                flex-direction: column;
+            }
+            .main {
+                order: 0;
+                width: 100%;
+            }
+
+            .side {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            h3 {
+                font-size: 1.7rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+
+            nav li a {
+                padding: 1.6rem;
+                font-size: 1.2rem;
+                display: block;
+            }
+
+            nav li:not(:first-child) {
+                display: none;
+            }
+
+            nav li:first-child {
+                display: block;
+            }
+
+            .active {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .active li:not(:first-child) {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            h1 {
+                font-size: 3.2rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.9rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+
+            nav li a {
+                padding: 1.6rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) {
+
+            h1 {
+                font-size: 3.6rem;
+            }
+
+            h2 {
+                font-size: 2.7rem;
+            }
+
+            h3 {
+                font-size: 2.1rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+            }
+
+            nav li a {
+                padding: 1.8rem;
+                font-size: 1.4rem;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+
+            h1 {
+                font-size: 3.8rem;
+            }
+
+            h2 {
+                font-size: 2.9rem;
+            }
+
+            h3 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                font-size: 1.7rem;
+            }
+
+            nav li a {
+                padding: 1.9rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media only screen and (min-width: 1400px) {
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 3.2rem;
+            }
+
+            h3 {
+                font-size: 2.4rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+            }
+
+            nav li a {
+                padding: 2rem;
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    
+    
+    <header>
+        <h1>Lorem ipsum.</h1>
+        <h3>Lorem ipsum dolor.</h3>
+    </header>
+    
+    
+    
+    <nav id="collapse">
+        <li onclick="Collaps()"><a href="#"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+    </nav>
+    
+    
+    
+    
+    
+    <main>
+        <div class="side">
+            <div class="blog">
+                <h2>Lorem, ipsum.</h2>
+                <div class="photo">
+                    <img src="https://www.placeholder.com/1200x200">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore pariatur ipsa perspiciatis animi nesciunt laudantium quis inventore placeat accusamus tempora! Molestiae rem maxime soluta delectus aliquid accusantium voluptate nihil quas?</p>
+            </div>
+
+            <div class="photo">
+                <img style="height: 5rem;" src="https://www.placeholder.com/900x50">
+            </div>
+            <div class="photo">
+                <img style="height: 5rem;" src="https://www.placeholder.com/900x50">
+            </div>
+            <div class="photo">
+                <img style="height: 5rem;" src="https://www.placeholder.com/900x50">
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="blog">
+                <h2>Lorem, ipsum.</h2>
+                <div class="photo">
+                    <img src="https://www.placeholder.com/1800x200">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore pariatur ipsa perspiciatis animi nesciunt laudantium quis inventore placeat accusamus tempora! Molestiae rem maxime soluta delectus aliquid accusantium voluptate nihil quas?</p>
+            </div>
+
+            <div class="blog">
+                <h2>Lorem, ipsum.</h2>
+                <div class="photo">
+                    <img src="https://www.placeholder.com/1800x200">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore pariatur ipsa perspiciatis animi nesciunt laudantium quis inventore placeat accusamus tempora! Molestiae rem maxime soluta delectus aliquid accusantium voluptate nihil quas?</p>
+            </div>
+
+            <div class="blog">
+                <h2>Lorem, ipsum.</h2>
+                <div class="photo">
+                    <img src="https://www.placeholder.com/1800x200">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore pariatur ipsa perspiciatis animi nesciunt laudantium quis inventore placeat accusamus tempora! Molestiae rem maxime soluta delectus aliquid accusantium voluptate nihil quas?</p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <h1>FOOTER</h1>
+    </footer>
+
+
+    <script>
+        collapse = document.getElementById("collapse")
+        function Collaps(){
+            collapse.classList.toggle('active')
+        }
+    </script>
+
+
+    </body>
+</html>
