@@ -1,5 +1,5 @@
 @import url(utils.css);
-@import url(m_query.css);
+@import url(responsive.css);
 
 header {
     justify-content: space-between;
@@ -81,6 +81,15 @@ nav a:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .7);
+}
+
+.w2 {
+    background-image: url(imgs/blogCar.jpg);
+    height: 50vh;
+}
+
+.w2::before {
+    height: 50%;
 }
 
 .about {
@@ -207,6 +216,11 @@ nav a:hover {
     border-radius: 50%;
 }
 
+.portrait img:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
 .flex-element {
     width: 50%;
 }
@@ -237,4 +251,214 @@ footer a:not(:last-child) {
 
 footer a:hover i {
     color: var(--softDark);
+}
+
+.form {
+    flex-direction: column;
+    align-self: center;
+}
+
+.blogs {
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.blogs h1 {
+    font-weight: 200;
+    font-size: 5.5rem;
+}
+
+.blogs p {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.blog-header {
+    margin-bottom: 5rem;
+}
+
+.blog-card {
+    background-color: var(--gray);
+}
+
+.blog-card:not(:last-child) {
+    margin-bottom: 5rem;
+}
+
+.blog-card .blog-photo {
+    width: 35%;
+}
+
+.blog-card .blog-photo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-card .blog-content {
+    width: 65%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.blog-content h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    padding: .4rem 3rem;
+}
+
+.blog-content p {
+    font-size: 1.6rem;
+    padding: .5rem 3rem;
+}
+
+@media only screen and (max-width: 1920px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 10px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .flex-element {
+        width: 100%;
+    }
+
+    .welcome {
+        height: 85vh;
+    }
+
+    .welcome::before {
+        height: 85vh;
+    }
+
+    .location-card {
+        width: 35%;
+        padding: 1rem;
+    }
+
+    .location-card .bottom {
+        padding: 1rem;
+    }
+
+    .location-card h3 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 8px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .flex-element {
+        width: 100%;
+    }
+
+    .welcome {
+        height: 70vh;
+    }
+
+    .welcome::before {
+        height: 70vh;
+    }
+
+    .location-card {
+        width: 35%;
+        padding: 1rem;
+    }
+
+    .location-card .bottom {
+        padding: 1rem;
+    }
+
+    .location-card h3 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 6px;
+    }
+
+    header {
+        flex-direction: column;
+        height: 12.8rem;
+    }
+
+    .welcome {
+        height: 60vh;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .Show-Room {
+        flex-direction: column;
+    }
+
+    .Show-Room .one img {
+        height: 250px;
+    }
+
+    .Show-Room .one.superior {
+        order: -2;
+    }
+
+    .locations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-card {
+        width: 50%;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .flex-element {
+        width: 100%;
+    }
+
+    .welcome::before {
+        height: 60vh;
+    }
+
+    .blog-card {
+        flex-direction: column;
+    }
+
+    .blog-card .blog-photo {
+        width: 100%;
+    }
+
+    .blog-card .blog-content {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 0;
+    }
 }

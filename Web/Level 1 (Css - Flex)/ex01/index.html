@@ -15,12 +15,13 @@
                 <span>Best</span>CarSeller
             </a>
         </div>
-        <nav>
+        <nav class="active">
             <ul class="flex-items">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Show-Room</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#showroom">Show-Room</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -31,7 +32,7 @@
         <button class="btn-primary">Learn More</button>
     </section>
 
-    <section class="about flex-items">
+    <section id="about" class="about flex-items">
         <div class="card">
             <i class="fa-solid fa-screwdriver-wrench fa-xl"></i>
             <h3>24/7 Maintenance</h3>
@@ -72,7 +73,7 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section id="showroom" class="gallery">
         <h2 style="text-align: center; margin-top: 7.5rem; font-size: 4rem; font-weight: 200;">Photo Gallery</h2>
         <div class="images flex-items">
             <img src="imgs/dodge.jpg">
@@ -149,23 +150,22 @@
         </div>
     </section>
 
-    <section class="contact flex-items">
+    <section id="contact" class="contact flex-items">
         <div class="photo flex-element">
             <img src="imgs/contactDodge.jpg" width="100%">
         </div>
-        <div class="form flex-element" style=" padding: 5rem;">
+        <div class="form flex-element flex-items" style=" padding: 5rem;">
             <h2 style="text-align: center; margin-bottom: 1rem; font-size: 4rem; font-weight: 300;">Contact Us</h2>
             <p style="text-align: center; margin-bottom: 4rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit similique laudantium consectetur.</p>
             <form class="flex-items" style="flex-direction: column;">
                 <label for="name">Name</label>
-                <input type="text" id="name">
+                <input placeholder="Enter Your Name" type="text" id="name">
                 <label for="mail">Mail</label>
-                <input type="text" id="mail">
+                <input placeholder="Enter Your Mail" type="text" id="mail">
                 <label for="phone">Phone</label>
-                <input type="text" id="phone">
+                <input placeholder="Enter Your Phone" type="text" id="phone">
                 <button class="btn-primary">Submit</button>
             </form>
-            <p style="padding-top: 10rem; text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quam sed impedit voluptatum accusamus consequuntur veritatis asperiores qui earum et ipsum commodi laudantium porro architecto, reprehenderit error dignissimos. Saepe tempora repellat deserunt, necessitatibus adipisci dolorum est dignissimos aspernatur corrupti reiciendis? Asperiores esse culpa minus aliquid necessitatibus, iste laborum pariatur reprehenderit accusantium praesentium, saepe sint, temporibus nemo. Similique odit cupiditate voluptatum eum earum enim ipsa sapiente cumque, esse aperiam fuga nulla neque ab perferendis iusto illo. Reiciendis aperiam blanditiis incidunt perspiciatis itaque? Quos vitae ipsam blanditiis nesciunt sint quod unde quasi illum molestiae assumenda tenetur id aperiam autem temporibus animi quis, mollitia explicabo, enim tempore repudiandae consequatur laboriosam. Eligendi dolore totam praesentium rerum error, placeat aliquid neque necessitatibus consequatur nihil nobis?</p>
         </div>
     </section>
 
