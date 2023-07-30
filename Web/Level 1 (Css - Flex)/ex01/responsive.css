@@ -1,9 +1,0 @@
-@media only screen and (max-width: 600px) {
-    html {
-        font-size: 6px;
-    }
-
-    .welcome {
-        height: 60vh;
-    }
-}
