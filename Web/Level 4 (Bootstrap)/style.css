@@ -1,0 +1,99 @@
+nav {
+    background-color: #103a5e;
+}
+
+form.d-flex button {
+    background-color: #7ed41b;
+}
+
+form.d-flex button:hover {
+    background-color: #538d11;
+}
+
+form.d-flex button:active:hover {
+    background-color: #43720e;
+}
+
+header h1 {
+    font-size: 3.6rem;
+}
+
+header {
+    margin-top: 5rem;
+}
+
+header .border {
+    width: 50%;
+}
+
+.buttons {
+    justify-content: center;
+}
+
+header .header-footer {
+    background-color: #103a5e;
+    padding: 5rem 0;
+}
+
+.yesil {
+    border-color: #7ed41b;
+    color: #7ed41b;
+}
+
+.yesil:hover {
+    border-color: #7ed41b;
+    color: #103a5e;
+    background-color: #7ed41b;
+}
+
+.yesil:active:hover {
+    border-color: #7ed41b;
+    color: #103a5e;
+    background-color: #7ed41b;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #103a5e;
+}
+
+main li:hover {
+    cursor: pointer;
+}
+
+.card.d-flex {
+    flex-direction: row;
+}
+
+.page-link.active {
+    background-color: #103a5e;
+}
+
+.row {
+    justify-content: center;
+}
+
+main .card.a {
+    background-color: #103a5e;
+}
+
+.btn.a {
+    background-color: #7ed41b;
+    border-color: #7ed41b;
+}
+
+.btn.a:hover {
+    background-color: #538d11;
+    border-color: #538d11;
+
+}
+
+.btn.a:active:hover {
+    background-color: #43720e;
+    border-color: #43720e;
+}
