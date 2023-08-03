@@ -1,0 +1,59 @@
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bd-violet-bg);
+    --bs-tooltip-color: var(--bs-white);
+  }
+
+.img-wrapper {
+    max-width: 250px !important;
+    height: 100%;
+}
+
+.img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.pointed {
+    color: #ffc107;
+}
+
+div.text-success {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card-header {
+    background-color: white;
+    border: none;
+}
+
+.products .col-md-9 {
+    border-left: 1px solid #dbcfcf;
+}
+
+button.s:hover {
+    color: white;
+}
+
+.accordion-body ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.accordion-button {
+    padding: .75rem 3rem;
+}
+
+.header-comments {
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.profile-text {
+    margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    .img-wrapper {
+        margin: auto;
+    }
+}

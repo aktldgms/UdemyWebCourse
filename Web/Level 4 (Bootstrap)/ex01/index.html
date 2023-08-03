@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&family=Prompt&family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Bootstrap ex01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <div class="main my-5 d-flex">
+        <div id="filters" class="col-md-3 filters accordion accordion-flush px-5">
+            <div class="accordion-item shadow">
+                <div class="accordion-header">
+                    <h5>
+                        <button style="font-weight: bold; background-color: #e7e7e7;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Brand
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <ul class="form-check">
+                            <li><input class="form-check-input" type="checkbox" name="marka" id="lenovo"><label class="form-check-label" for="lenovo">Lenovo</label></li>
+                            <li><input class="form-check-input" type="checkbox" name="marka" id="Asus"><label class="form-check-label" for="Asus">Asus</label></li>
+                            <li><input class="form-check-input" type="checkbox" name="marka" id="HP"><label class="form-check-label" for="HP">HP</label></li>
+                            <li><input class="form-check-input" type="checkbox" name="marka" id="Dell"><label class="form-check-label" for="Dell">Dell</label></li>
+                            <li><input class="form-check-input" type="checkbox" name="marka" id="MSI"><label class="form-check-label" for="MSI">MSI</label></li>
+                            <li><input class="form-check-input" type="checkbox" name="marka" id="Samsung"><label class="form-check-label" for="Samsung">Samsung</label></li>
+                            <li><input class="form-check-input" type="checkbox" name="marka" id="Acer"><label class="form-check-label" for="Acer">Acer</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item shadow">
+                <div class="accordion-header">
+                    <h5>
+                        <button style="font-weight: bold; background-color: #e7e7e7;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Price
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="enaz">Min</label>
+                                <input class="form-control" style="width: 100%;" type="number" name="enaz" id="enaz" placeholder="5.000">
+                            </div>
+                            <div class="col-6">
+                                <label for="encok">Max</label>
+                                <input class="form-control" style="width: 100%;" type="number" name="encok" id="encok" placeholder="10.000">
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-outline-secondary mt-3" style="width: 100%;">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item shadow">
+                <div class="accordion-header">
+                    <h5>
+                        <button style="font-weight: bold; background-color: #e7e7e7;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Screen Size
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
+                        <label class="btn" for="btn-check-1">13.3 Inch</label>
+
+                        <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
+                        <label class="btn" for="btn-check-2">14 Inch</label>
+
+                        <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
+                        <label class="btn" for="btn-check-3">15.6 Inch</label>
+
+                        <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+                        <label class="btn" for="btn-check-4">17 Inch</label>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item shadow">
+                <div class="accordion-header">
+                    <h5>
+                        <button style="font-weight: bold; background-color: #e7e7e7;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Ram
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul class="form-check">
+                            <li><input class="form-check-input" type="checkbox" name="ram" id="16"><label class="form-check-label" for="16">16 GB</label></li>
+                            <li><input class="form-check-input" type="checkbox" name="ram" id="32"><label class="form-check-label" for="32">32 GB</label></li>
+                            <li><input class="form-check-input" type="checkbox" name="ram" id="64"><label class="form-check-label" for="64">64 GB</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item shadow">
+                <div class="accordion-header">
+                    <h5>
+                        <button style="font-weight: bold; background-color: #e7e7e7;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Product Models
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="model" id="m1">
+                            <label class="form-check-label" for="m1">Game Notebook</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="model" id="m2">
+                            <label class="form-check-label" for="m2">Notebook</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="model" id="m3">
+                            <label class="form-check-label" for="m3">Ultrabook</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 products ms-auto px-5">
+            <div class="product-card flex-md-row card row shadow">
+                <div class="card-image col-md-3 img-wrapper">
+                    <img src="imgs/1.jpeg" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-header d-flex justify-content-between mt-3">
+                        <h4 style="display: inline-block;">Iphone 11 Pro Max 128GB</h4>
+                        <button class="btn btn-outline-danger py-0"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="card-body">
+                        <div class="stars mb-2">
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-warning">4.2</span>
+                        </div>
+                        <div class="text-success mb-3">
+                            <span class="text-secondary">in Stock</span> FREE SHIPPING
+                        </div>
+                        <div class="price">
+                            <span class="text-warning" style="font-size: 20px;">12.500 TL</span> <span class="text-dark" style="text-decoration-line: line-through;">14.000 TL</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-5">
+                            <div class="left">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                    <button class="btn btn-primary me-md-2" type="button">
+                                        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> Add to Card
+                                    </button>
+                                    <button class="btn btn-outline-danger" type="button">
+                                        <i class="fa-solid fa-heart"></i> Add to Favorites
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                    Comments
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card flex-md-row card row shadow mt-3">
+                <div class="card-image col-md-3 img-wrapper">
+                    <img src="imgs/2.jpeg" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-header d-flex justify-content-between mt-3">
+                        <h4 style="display: inline-block;">Iphone 11 Pro Max 128GB</h4>
+                        <button class="btn btn-outline-danger py-0"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="card-body">
+                        <div class="stars mb-2">
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-warning">4.3</span>
+                        </div>
+                        <div class="text-success mb-3">
+                            <span class="text-secondary">in Stock</span> FREE SHIPPING
+                        </div>
+                        <div class="price">
+                            <span class="text-warning" style="font-size: 20px;">12.500 TL</span> <span class="text-dark" style="text-decoration-line: line-through;">14.000 TL</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-5">
+                            <div class="left">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                    <button class="btn btn-primary me-md-2" type="button"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> Add to Card</button>
+                                    <button class="btn btn-outline-danger" type="button"><i class="fa-solid fa-heart"></i> Add to Favorites</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                    Comments
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card flex-md-row card row shadow mt-3">
+                <div class="card-image col-md-3 img-wrapper">
+                    <img src="imgs/3.jpeg" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-header d-flex justify-content-between mt-3">
+                        <h4 style="display: inline-block;">Iphone 11 Pro Max 128GB</h4>
+                        <button class="btn btn-outline-danger py-0"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="card-body">
+                        <div class="stars mb-2">
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star pointed"></i>
+                            <i class="fa-solid fa-star pointed"></i>
+                            <span class="text-warning">5.0</span>
+                        </div>
+                        <div class="text-success mb-3">
+                            <span class="text-secondary">in Stock</span> FREE SHIPPING
+                        </div>
+                        <div class="price">
+                            <span class="text-warning" style="font-size: 20px;">12.500 TL</span> <span class="text-dark" style="text-decoration-line: line-through;">14.000 TL</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-5">
+                            <div class="left">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                    <button class="btn btn-primary me-md-2" type="button"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> Add to Card</button>
+                                    <button class="btn btn-outline-danger" type="button"><i class="fa-solid fa-heart"></i> Add to Favorites</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                    Comments
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav aria-label="..." class="mt-4">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active" aria-current="page">
+                    <span class="page-link">2</span>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+        
+    </div>
+    <div style="width: 65%;" class="Comments offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+          <h4 class="offcanvas-title mx-auto" id="staticBackdropLabel">COMMENTS</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="rating mx-auto text-center container border rounded shadow py-3" style="width: 70%;">
+                <div class="stars my-2">
+                    <i class="fa-solid fa-star pointed"></i>
+                    <i class="fa-solid fa-star pointed"></i>
+                    <i class="fa-solid fa-star pointed"></i>
+                    <i class="fa-solid fa-star pointed"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span style="color: #333;">4.52/5.00</span>
+                    <br>
+                    <span class="text-muted" style="font-size: 14px;">148 Evaluation</span>
+                </div>
+                <div class="bars mt-3 mb-5">
+                    <div class="bar row align-items-center">
+                        <div class="col-2">5 star</div>
+                        <div class="col-8 progress p-0" style="background-color: #e7e7e7;"><div class="progress bg-warning" style="width: 81%;"></div></div>
+                        <div class="col-2">81%</div>
+                    </div>
+                    <div class="bar row align-items-center">
+                        <div class="col-2">4 star</div>
+                        <div class="col-8 progress p-0" style="background-color: #e7e7e7;"><div class="progress bg-warning" style="width: 5%;"></div></div>
+                        <div class="col-2">4.7%</div>
+                    </div>
+                    <div class="bar row align-items-center">
+                        <div class="col-2">3 star</div>
+                        <div class="col-8 progress p-0" style="background-color: #e7e7e7;"><div class="progress bg-warning" style="width: 5%;"></div></div>
+                        <div class="col-2">4.7%</div>
+                    </div>
+                    <div class="bar row align-items-center">
+                        <div class="col-2">2 star</div>
+                        <div class="col-8 progress p-0" style="background-color: #e7e7e7;"><div class="progress bg-warning" style="width: 5%;"></div></div>
+                        <div class="col-2">4.7%</div>
+                    </div>
+                    <div class="bar row align-items-center">
+                        <div class="col-2">1 star</div>
+                        <div class="col-8 progress p-0" style="background-color: #e7e7e7;"><div class="progress bg-warning" style="width: 5%;"></div></div>
+                        <div class="col-2">4.7%</div>
+                    </div>
+                </div>
+          </div>
+          <div class="comment mx-auto container border rounded shadow p-3 my-5" style="width: 70%;">
+            <div class="header-comments text-center">
+                <h5>Comments</h5>
+            </div>
+            <div class="person-comment mt-5 border-bottom">
+                <div class="d-flex justify-content-between">
+                    <div class="profile d-flex flex-row">
+                        <div class="picture rounded-circle" style="background-color: #d1d1d1; width: 50px; height: 50px;"></div>
+                        <div class="profile-text">
+                            <div class="name">Name Surname</div>
+                            <div class="stars mb-2">
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-warning">4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <button class="btn btn-light"><i class="fa-solid fa-thumbs-up" style="color: #000000;"></i></button>
+                        <button class="btn btn-light"><i class="fa-solid fa-thumbs-down" style="color: #000000;"></i></button>
+                        <button class="btn btn-light"><i class="fa-solid fa-caret-down" style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos odit ipsam voluptates, aut libero voluptatibus. Amet, iste? Hic esse ratione provident, aperiam atque id molestias. Inventore architecto officia amet debitis?</p>
+                </div>
+            </div>
+            <div class="person-comment mt-3 border-bottom">
+                <div class="d-flex justify-content-between">
+                    <div class="profile d-flex flex-row">
+                        <div class="picture rounded-circle" style="background-color: #d1d1d1; width: 50px; height: 50px;"></div>
+                        <div class="profile-text">
+                            <div class="name">Name Surname</div>
+                            <div class="stars mb-2">
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-warning">2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <button class="btn btn-light"><i class="fa-solid fa-thumbs-up" style="color: #000000;"></i></button>
+                        <button class="btn btn-light"><i class="fa-solid fa-thumbs-down" style="color: #000000;"></i></button>
+                        <button class="btn btn-light"><i class="fa-solid fa-caret-down" style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos odit ipsam voluptates, aut libero voluptatibus. Amet, iste? Hic esse ratione provident, aperiam atque id molestias. Inventore architecto officia amet debitis?</p>
+                </div>
+            </div>
+            <div class="person-comment mt-3 border-bottom">
+                <div class="d-flex justify-content-between">
+                    <div class="profile d-flex flex-row">
+                        <div class="picture rounded-circle" style="background-color: #d1d1d1; width: 50px; height: 50px;"></div>
+                        <div class="profile-text">
+                            <div class="name">Name Surname</div>
+                            <div class="stars mb-2">
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-warning">3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <button class="btn btn-light"><i class="fa-solid fa-thumbs-up" style="color: #000000;"></i></button>
+                        <button class="btn btn-light"><i class="fa-solid fa-thumbs-down" style="color: #000000;"></i></button>
+                        <button class="btn btn-light"><i class="fa-solid fa-caret-down" style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos odit ipsam voluptates, aut libero voluptatibus. Amet, iste? Hic esse ratione provident, aperiam atque id molestias. Inventore architecto officia amet debitis?</p>
+                </div>
+            </div>
+            <div class="person-comment mt-3 border-bottom">
+                <div class="d-flex justify-content-between">
+                    <div class="profile d-flex flex-row">
+                        <div class="picture rounded-circle" style="background-color: #d1d1d1; width: 50px; height: 50px;"></div>
+                        <div class="profile-text">
+                            <div class="name">Name Surname</div>
+                            <div class="stars mb-2">
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-warning">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <button class="btn btn-light"><i class="fa-solid fa-thumbs-up" style="color: #000000;"></i></button>
+                        <button class="btn btn-light"><i class="fa-solid fa-thumbs-down" style="color: #000000;"></i></button>
+                        <button class="btn btn-light"><i class="fa-solid fa-caret-down" style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos odit ipsam voluptates, aut libero voluptatibus. Amet, iste? Hic esse ratione provident, aperiam atque id molestias. Inventore architecto officia amet debitis?</p>
+                </div>
+            </div>
+            <div class="person-comment mt-3">
+                <div class="d-flex justify-content-between">
+                    <div class="profile d-flex flex-row">
+                        <div class="picture rounded-circle" style="background-color: #d1d1d1; width: 50px; height: 50px;"></div>
+                        <div class="profile-text">
+                            <div class="name">Name Surname</div>
+                            <div class="stars mb-2">
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star pointed"></i>
+                                <i class="fa-solid fa-star pointed"></i>
+                                <span class="text-warning">5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <button class="btn btn-light"><i class="fa-solid fa-thumbs-up" style="color: #000000;"></i></button>
+                        <button class="btn btn-light"><i class="fa-solid fa-thumbs-down" style="color: #000000;"></i></button>
+                        <button class="btn btn-light"><i class="fa-solid fa-caret-down" style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos odit ipsam voluptates, aut libero voluptatibus. Amet, iste? Hic esse ratione provident, aperiam atque id molestias. Inventore architecto officia amet debitis?</p>
+                </div>
+            </div>
+          </div>
+          <div class="your-comment mx-auto container border rounded shadow p-3 my-5" style="width: 70%;">
+            <div class="text-center mb-5">
+                <h5>Add Comment</h5>
+            </div>
+            <div class="form">
+                <input type="text" class="form-control my-3" placeholder="Your Name" style="width: 100%;">
+                <textarea class="form-control my-3" style="width: 100%; height: 75px;" placeholder="Your Message"></textarea>
+                <select class="form-select" aria-label="Default select example" style="display: inline-block; width: 20%;">
+                    <option selected>Rate This</option>
+                    <option value="1">5 Star</option>
+                    <option value="2">4 Star</option>
+                    <option value="3">3 Star</option>
+                    <option value="2">2 Star</option>
+                    <option value="3">1 Star</option>
+                </select>
+                <button class="btn btn-primary" type="button">Submit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
