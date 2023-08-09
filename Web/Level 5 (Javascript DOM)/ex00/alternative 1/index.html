@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM PROJESI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Prompt&family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: .75rem;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #fff; 
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #ADD8E6; 
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9cd2eb;
+        }
+
+        #taskName::placeholder {
+            color: #ADD8E6;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Roboto', sans-serif;
+            background-color: #F0FFFF;
+            user-select: none;
+        }
+
+        .checked {
+            text-decoration: line-through;
+        }
+
+        span.active {
+            color: #5D3FD3;
+            font-weight: 600;
+        }
+
+        span {
+            cursor: pointer;
+            color: #000;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .container {
+            margin: 5rem auto;
+        }
+
+        .card {
+            border-radius: 0;
+        }
+
+        .card-head {
+            background: #ADD8E6;
+            border-bottom: 3px solid #5D3FD3;
+        }
+
+        input[type="checkbox"]:hover,
+        label:hover {
+            cursor: pointer;
+        }
+
+        input[type="checkbox"].form-check-input:checked {
+            background-color: #5D3FD3;
+            border-color: #5D3FD3;
+        }
+
+        input[type="checkbox"].form-check-input {
+            border-radius: 50%;
+        }
+
+        .list-group {
+            border-radius: 0;
+        }
+
+        .list-group-item {
+            font-size: 1.1rem;
+            color: #5D3FD3;
+            font-weight: 500;
+        }
+
+        .list-group-item i.fa-ellipsis-vertical {
+            color: #5D3FD3;
+            font-size: 1.2rem;
+        }
+
+        #addButton,
+        #clearButton {
+            min-width: 9rem;
+            padding: .8rem 1rem;
+        }
+
+        #taskName,
+        #addButton,
+        #clearButton {
+            border-radius: 0;
+        }
+
+        #taskName {
+            box-shadow: none;
+            outline: none;
+            color: #2f9ed1;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-color: #ADD8E6;
+        }
+
+        #taskName:focus {
+            border-color: #ADD8E6;
+        }
+        
+        .tasks {
+            height: 500px;
+            overflow: auto;
+            background-color: #f8ffff;
+            border: 1px solid rgba(93, 63, 211, .3);
+        }
+
+        .tasks li:last-child {
+            margin-bottom: 0;
+        }
+
+        .dropdown-menu-dark {
+            background-color: #ADD8E6;
+        }
+
+        .dropdown-menu a {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .dropdown-menu li:hover a {
+            color: #333;
+        }
+
+        .title {
+            color: #5D3FD3;
+        }
+
+        .btn-danger {
+            background-color: #9378ff;
+            border: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .btn-danger:hover {
+            background-color: #775be9;
+            color: #000;
+        }
+
+        .btn-danger:focus:active {
+            background-color: #5D3FD3;
+            color: #000;
+        }
+
+        .btn-danger:disabled {
+            background-color: #5D3FD3;
+            color: #000;
+        }
+
+        .btn-danger:focus:hover {
+            background-color: #5D3FD3;
+            color: #000;
+        }
+
+        .btn-primary {
+            background-color: #ADD8E6;
+            border: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #89CFF0;
+            color: #333;
+        }
+
+        .btn-primary:focus:active {
+            background-color: #79bddd;
+            color: #333;
+        }
+
+        .btn-primary:disabled {
+            background-color: #79bddd;
+            color: #333;
+        }
+
+        .btn-primary:focus:hover {
+            background-color: #79bddd;
+            color: #333;
+        }
+
+        @media (max-width: 1400px) {
+            .tasks {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tasks {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .buttons-top {
+                flex-direction: column;
+            }
+            html {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card shadow">
+        <div class="card-head py-3 text-center">
+            <h1 class="title text-uppercase h2 mb-0">
+                Your To-Do List
+            </h1>
+        </div>
+        <div class="card-body">
+            <div class="body-top">
+               
+                <div class="buttons-top d-flex justify-content-between mb-2 align-items-center">
+                    <div id="filters">
+                        <span id="filter1" class="active me-2" onclick="filters(this)">All</span>
+                        <span id="filter2" class="me-2" onclick="filters(this)">Pending</span>
+                        <span id="filter3" onclick="filters(this)">Completed</span>
+                    </div>
+                    <div class="remove">
+                        <button id="clearButton" class="btn btn-danger shadow-sm" type="button">
+                            Clear All <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="input-top d-flex shadow-sm">
+                    <input id="taskName" type="text" class="form-control" placeholder="Add Some New Tasks">
+                    <button id="addButton" class="btn btn-primary shadow-sm" type="button">
+                        Add Task <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="tasks shadow-sm mt-4">
+                <ul class="list-group">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+</body>
+</html>
