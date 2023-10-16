@@ -21,7 +21,7 @@ a {
 
 #quiz {
     background-color: #fff;
-    height: 70vh;
+    height: 75vh;
     width: 900px;
     position: absolute;
     top: 50%;
@@ -117,4 +117,12 @@ a {
     bottom: 0;
     right: 0;
     left: 0;
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
