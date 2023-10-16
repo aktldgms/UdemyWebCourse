@@ -1,0 +1,132 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.quiz-card {
+    height: 70vh;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,500%);
+    pointer-events: none;
+    transition: all .6s ease-in;
+}
+
+.quiz-card.show-quiz {
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+
+.quiz-title {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 1.5rem;
+    border: 1px solid #333;
+    background-color: #f8f9fa;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #666;
+}
+
+li:not(:last-child) {
+    margin-bottom: .4rem;
+}
+
+.containerCustom {
+    width: 80%;
+    margin: auto;
+}
+
+.quiz-buttons {
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.d-none-next {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.answer-correct {
+    color: #00c220;
+    border: 1px solid #36c74e;
+    background-color: #e3ffe8;
+}
+
+.answer-wrong {
+    color: #cf0000;
+    border: 1px solid #c73838;
+    background-color: #ffe3e3;
+}
+
+li.list-off:hover {
+    cursor: default;
+    background-color: #f8f9fa;
+    border: 1px solid #333;
+}
+
+li.list-off.answer-correct:hover {
+    color: #00c220;
+    border: 1px solid #36c74e;
+    background-color: #e3ffe8;
+}
+
+li.list-off.answer-wrong:hover {
+    color: #cf0000;
+    border: 1px solid #c73838;
+    background-color: #ffe3e3;
+}
+
+.timer {
+    background-color: #333;
+    color: #f8f9fa;
+}
+
+.time_text {
+    font-size: 15px;
+    margin-left: .8rem;
+}
+
+.time_left {
+    font-size: 20px;
+    background-color: #ffff93;
+    color: #333;
+    padding: .2rem .8rem;
+    margin-left: .8rem;
+    border: 1px solid #333;
+}
+
+.time_line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #333;
+    height: 3px;
+    width: 0px;
+}
+
+button.btn.btn-info {
+    background-color: #ffff93;
+    border: 1px dashed #333;
+}
+
+button.btn.btn-info:active {
+    background-color: #dddd75;
+}
+
+.finito {
+    transform: translateY(50%);
+}
