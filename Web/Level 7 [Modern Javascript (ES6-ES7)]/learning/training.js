@@ -58,7 +58,7 @@ let list3 = [...list1, ...array2]; // value
 let names = ["mete", "metin"];
 // let firstname = names[0];
 // let lastname = names[1];
-let [firstname, lastname] = names; // THAT'S AMAZING
+let [firstname, lastname] = names;
 [firstname, lastname] = "Cenk Han".split(" ");
 console.log (firstname, lastname);
 
@@ -68,7 +68,7 @@ let product = {
     p_price: 1879
 };
 
-let {p_id, p_name, p_price} = product; // THAT'S 2X AMAZING (a little complicated)
+let {p_id, p_name, p_price} = product;
 console.log(p_id, p_name, p_price);
 
 let product2 = {

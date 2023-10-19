@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <style>
+        .img-wrapper{
+            height: 100%;
+            width: auto;
+            border-right: 2px solid #d8d8d8;
+        }
+
+        .img-wrapper2{
+            height: 140px;
+            width: auto;
+        }
+
+        img {
+            object-fit: cover;
+            max-width:100%;
+            max-height:100%;
+            height:100%;
+            width:100%;
+        }
+
+        .btn {
+            width: 8%;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        .form-control {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .form-control:focus {
+            border: 1px solid #333;
+        }
+
+        .card {
+            max-height: auto;
+        }
+
+        .neigbour-countries .card {
+            transition: .3s all ease-out;
+        }
+
+        .neigbour-countries .card:hover {
+            cursor: pointer;
+            opacity: .6;
+        }
+
+        .card.card2 {
+            max-height: 500px;
+            width: 18%;
+        }
+        #send {
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+
+        <div class="errors">
+            
+        </div>
+
+        <form class="form-floating d-flex mb-5">
+            <input type="text" class="form-control shadow-none" id="floatingInputValue" placeholder="Input with Country Name">
+            <label for="floatingInputValue" style="font-size: 14px;">Input Country Name</label>
+            <div id="send" class="btn btn-dark p-3">Send</div>
+            <div id="location" class="btn btn-danger p-3"><i style="color: white;" class="fa-solid fa-location-dot fa-lg"></i></div>
+        </form>
+        <div class="spinner-border text-danger d-none" role="status">
+        </div>
+
+        <div class="searched-country-title">
+
+        </div>
+        <div class="searched-country mb-5">
+        </div>
+
+        <div class="neigbour-countries-title">
+            
+        </div>
+        <div class="neigbour-countries d-flex flex-wrap justify-content-evenly">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

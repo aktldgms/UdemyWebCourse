@@ -42,6 +42,7 @@ i:hover {
     border-radius: 10px;
     border: 1px solid #fff;
     max-height: 785px;
+    opacity: .88;
 }
 
 .progress_bar {
