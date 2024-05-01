@@ -10,6 +10,6 @@
 <img src="https://github.com/aktldgms/UdemyWebCourse/assets/116670654/498fa1be-2d13-4a27-8f49-1b5447773846" width="49.75%"></img>
 <img src="https://github.com/aktldgms/UdemyWebCourse/assets/116670654/a4872277-f8d7-4936-ac6c-a7a634ff7c69" width="49.75%"></img>
 
-<p>Asenkron fonksiyon kullanımı: </p>
+<p>Asenkron fonksiyon kullanımını öğrenmek için yaptığım basit uygulama: </p>
 
 <img src="https://github.com/aktldgms/UdemyWebCourse/assets/116670654/5c5e213f-201a-42c3-9c47-0dd124e373f8" width="70%"></img>
